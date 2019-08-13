@@ -17,7 +17,9 @@ class Main extends Component {
 
   render() {
     return (
-      <main>
+      <main
+        className="main"
+        style={this.props.styles ? { marginBottom: 0 } : null}>
         <button className="btn" onClick={() => this.addCard()}>
           Add Item
         </button>

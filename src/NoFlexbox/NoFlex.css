@@ -1,12 +1,11 @@
-*::before,
+*,
 *::after,
-html,
-body {
-  padding: 0;
+*::before {
   margin: 0;
-  box-sizing: border-box;
-  height: 100%;
+  padding: 0;
+  box-sizing: inherit;
 }
+
 #root {
   min-height: 100vh; /* will cover the 100% of viewport */
   overflow: hidden;
@@ -14,20 +13,22 @@ body {
   position: relative;
 }
 
-nav {
+.nav {
   text-align: center;
   padding: 15px 0;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
-main {
-  margin-bottom: 90px;
+.main {
+  /* Por ahora no hace nada */
+  height: 100%;
+  margin-bottom: 50px;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-footer {
+.footer {
   position: absolute;
   bottom: 0;
   width: 100%;

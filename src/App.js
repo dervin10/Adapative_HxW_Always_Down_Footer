@@ -1,18 +1,18 @@
 import React from "react";
-import "./App.css";
-import Main from "./main";
+import NoFlexbox from "./NoFlexbox/NoFlexbox";
+import YesFlexbox from "./YesFlexbox/YesFlexbox";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <nav>
-        <h1>Hello I'm a Navbar</h1>
-      </nav>
-      <Main />
-      <footer>
-        <h1>Hello I'm a Footer</h1>
-      </footer>
-    </>
+    <BrowserRouter>
+      <div>
+        <Switch>
+          <Route exact path="/flex" component={YesFlexbox} />
+          <Route path="/" component={NoFlexbox} />
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 
